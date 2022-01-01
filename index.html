@@ -3,8 +3,20 @@
 <head>
   <meta charset="utf-8">
   
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125333540-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125333540-1');
+</script>
+<!-- End Google Analytics -->
+
+  
   <title>NES Tetris Japan Portal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
 <meta property="og:title" content="NES Tetris Japan Portal">
 <meta property="og:url" content="https://nestetrisjp.github.io/staging-website/index.html">
@@ -13,32 +25,24 @@
 <meta property="article:author" content="suitougreentea">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="NES Tetris Japan Portal" type="application/atom+xml">
+    <link rel="alternate" href="/staging-website/atom.xml" title="NES Tetris Japan Portal" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/staging-website/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/staging-website/css/style.css">
 
   
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+<link rel="stylesheet" href="/staging-website/fancybox/jquery.fancybox.min.css">
 
-ga('create', 'UA-125333540-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+  
 <meta name="generator" content="Hexo 6.0.0"></head>
 
 <body>
@@ -47,6 +51,14 @@ ga('send', 'pageview');
       <header id="header">
   <div id="banner"></div>
   <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/staging-website/" id="logo">
+          <img src="/staging-website/css/images/logo.svg" alt="NES Tetris Japan Portal"/>
+        </a>
+      </h1>
+      
+    </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
@@ -58,31 +70,24 @@ ga('send', 'pageview');
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/staging-website/atom.xml" title="RSSフィード"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="検索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://nestetrisjp.github.io/staging-website"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://nestetrisjp.github.io/staging-website"></form>
       </div>
-    </div>
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/staging-website/" id="logo">
-          <img src="/css/images/logo.svg" alt="NES Tetris Japan Portal"/>
-        </a>
-      </h1>
-      
     </div>
   </div>
 </header>
+
       <div class="outer">
         <section id="main">
   
-    <article id="post-das-keeping-tech-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-das-keeping-tech-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/staging-website/das-keeping-tech-2/" class="article-date">
-  <time datetime="2018-08-25T00:00:00.000Z" itemprop="datePublished">2018-08-25</time>
+  <time class="dt-published" datetime="2018-08-25T00:00:00.000Z" itemprop="datePublished">2018-08-25</time>
 </a>
     
   <div class="article-category">
@@ -97,13 +102,13 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/staging-website/das-keeping-tech-2/">DASのテクニック (2): DASをチャージする</a>
+      <a class="p-name article-title" href="/staging-website/das-keeping-tech-2/">DASのテクニック (2): DASをチャージする</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="壁チャージ-wall-charge">壁チャージ (wall charge)</h2>
 <p>NESテトリスのDASの仕様として、以下のものがありました。</p>
@@ -141,7 +146,8 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech-2/" data-id="ckxvgt2qg0001n6omdl8ne501" data-title="DASのテクニック (2): DASをチャージする | NES Tetris Japan Portal" class="article-share-link">シェア</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech-2/" data-id="ckxvl48ws0001n3om7s6j5fes" data-title="DASのテクニック (2): DASをチャージする | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/DAS/" rel="tag">DAS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/%E5%A3%81%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8/" rel="tag">壁チャージ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/%E6%A8%AA%E3%81%AE%E9%95%B7%E6%8A%BC%E3%81%97/" rel="tag">横の長押し</a></li></ul>
@@ -152,11 +158,12 @@ ga('send', 'pageview');
 </article>
 
 
+
   
-    <article id="post-das-keeping-tech" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-das-keeping-tech" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/staging-website/das-keeping-tech/" class="article-date">
-  <time datetime="2018-08-23T00:00:00.000Z" itemprop="datePublished">2018-08-23</time>
+  <time class="dt-published" datetime="2018-08-23T00:00:00.000Z" itemprop="datePublished">2018-08-23</time>
 </a>
     
   <div class="article-category">
@@ -171,13 +178,13 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/staging-website/das-keeping-tech/">DASのテクニック (1): DASを使い回す</a>
+      <a class="p-name article-title" href="/staging-website/das-keeping-tech/">DASのテクニック (1): DASを使い回す</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="「DASを使い回す」とは？">「DASを使い回す」とは？</h2>
 <p><a href="/das-introduction/">DASの基本</a>でも少し触れましたが、DASが16フレーム、ARRが6フレームであるNESテトリスの横移動の仕様では、高速域でミノを端まで持っていくには不十分です。「DASを使い回す」ことにより、この問題をある程度解決することができます。「DASを使い回す」とは、DASカウンターがチャージ状態にある状態を維持しながら次のミノの操作を始めることを指し、これによって16フレームの待ち時間を取り除くことができます。</p>
@@ -224,7 +231,8 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech/" data-id="ckxvgt2qp000en6om7k2i7bfo" data-title="DASのテクニック (1): DASを使い回す | NES Tetris Japan Portal" class="article-share-link">シェア</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech/" data-id="ckxvl48ww0003n3omd14sdkhl" data-title="DASのテクニック (1): DASを使い回す | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/DAS/" rel="tag">DAS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/%E3%83%93%E3%82%BF%E6%AD%A2%E3%82%81/" rel="tag">ビタ止め</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/%E6%A8%AA%E3%82%BF%E3%83%A1%E3%81%AE%E6%8C%AF%E3%82%8A%E6%9B%BF%E3%81%88/" rel="tag">横タメの振り替え</a></li></ul>
@@ -235,11 +243,12 @@ ga('send', 'pageview');
 </article>
 
 
+
   
-    <article id="post-das-introduction" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-das-introduction" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/staging-website/das-introduction/" class="article-date">
-  <time datetime="2018-08-22T00:00:00.000Z" itemprop="datePublished">2018-08-22</time>
+  <time class="dt-published" datetime="2018-08-22T00:00:00.000Z" itemprop="datePublished">2018-08-22</time>
 </a>
     
   <div class="article-category">
@@ -254,13 +263,13 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/staging-website/das-introduction/">DASの基本</a>
+      <a class="p-name article-title" href="/staging-website/das-introduction/">DASの基本</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>ここでは、テトリスにおけるDASについて概説します。</p>
 <h2 id="DASとは？">DASとは？</h2>
@@ -341,7 +350,8 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-introduction/" data-id="ckxvgt2qc0000n6omatlfalts" data-title="DASの基本 | NES Tetris Japan Portal" class="article-share-link">シェア</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-introduction/" data-id="ckxvl48wo0000n3omefcph8jj" data-title="DASの基本 | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/staging-website/tags/DAS/" rel="tag">DAS</a></li></ul>
@@ -352,7 +362,9 @@ ga('send', 'pageview');
 </article>
 
 
+
   
+
 
 </section>
         
@@ -380,9 +392,18 @@ ga('send', 'pageview');
   
     
   <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/staging-website/tags/DAS/" style="font-size: 20px;">DAS</a> <a href="/staging-website/tags/%E3%83%93%E3%82%BF%E6%AD%A2%E3%82%81/" style="font-size: 10px;">ビタ止め</a> <a href="/staging-website/tags/%E5%A3%81%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8/" style="font-size: 10px;">壁チャージ</a> <a href="/staging-website/tags/%E6%A8%AA%E3%81%AE%E9%95%B7%E6%8A%BC%E3%81%97/" style="font-size: 10px;">横の長押し</a> <a href="/staging-website/tags/%E6%A8%AA%E3%82%BF%E3%83%A1%E3%81%AE%E6%8C%AF%E3%82%8A%E6%9B%BF%E3%81%88/" style="font-size: 10px;">横タメの振り替え</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
     <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/staging-website/archives/2018/08/">2018年 8月</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/staging-website/archives/2018/08/">8月 2018</a></li></ul>
     </div>
   </div>
 
@@ -418,12 +439,13 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
+      
       &copy; 2022 suitougreentea<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>,
-      Theme based on <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank">Landscape</a>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, Theme based on <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank">Landscape</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -434,27 +456,21 @@ ga('send', 'pageview');
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/staging-website/js/jquery-3.4.1.min.js"></script>
+
 
 
   
-<link rel="stylesheet" href="/staging-website/fancybox/jquery.fancybox.css">
-
-  
-<script src="/staging-website/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/staging-website/fancybox/jquery.fancybox.min.js"></script>
 
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/apng-canvas/2.1.1/apng-canvas.min.js"></script>
-<script>
-  APNG.ifNeeded().then(function() {
-    var images = document.querySelectorAll(".apng-images");
-    for (var i = 0; i < images.length; i++) APNG.animateImage(images[i]);
-  });
-</script>
 
 
 <script src="/staging-website/js/script.js"></script>
+
+
+
 
 
   </div>
