@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NES Tetris Japan Portal</title>
+  
+  
+  <link href="https://nestetrisjp.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://nestetrisjp.github.io/"/>
+  <updated>2022-01-01T06:07:23.923Z</updated>
+  <id>https://nestetrisjp.github.io/</id>
+  
+  <author>
+    <name>suitougreentea</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DASのテクニック (2): DASをチャージする</title>
+    <link href="https://nestetrisjp.github.io/das-keeping-tech-2/"/>
+    <id>https://nestetrisjp.github.io/das-keeping-tech-2/</id>
+    <published>2018-08-25T00:00:00.000Z</published>
+    <updated>2022-01-01T06:07:23.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;壁チャージ-wall-charge&quot;&gt;壁チャージ (wall</summary>
+        
+      
+    
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/categories/DAS/"/>
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/tags/DAS/"/>
+    
+    <category term="壁チャージ" scheme="https://nestetrisjp.github.io/tags/%E5%A3%81%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8/"/>
+    
+    <category term="横の長押し" scheme="https://nestetrisjp.github.io/tags/%E6%A8%AA%E3%81%AE%E9%95%B7%E6%8A%BC%E3%81%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DASのテクニック (1): DASを使い回す</title>
+    <link href="https://nestetrisjp.github.io/das-keeping-tech/"/>
+    <id>https://nestetrisjp.github.io/das-keeping-tech/</id>
+    <published>2018-08-23T00:00:00.000Z</published>
+    <updated>2022-01-01T06:07:23.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;「DASを使い回す」とは？&quot;&gt;「DASを使い回す」とは？&lt;/h2&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/categories/DAS/"/>
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/tags/DAS/"/>
+    
+    <category term="横タメの振り替え" scheme="https://nestetrisjp.github.io/tags/%E6%A8%AA%E3%82%BF%E3%83%A1%E3%81%AE%E6%8C%AF%E3%82%8A%E6%9B%BF%E3%81%88/"/>
+    
+    <category term="ビタ止め" scheme="https://nestetrisjp.github.io/tags/%E3%83%93%E3%82%BF%E6%AD%A2%E3%82%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DASの基本</title>
+    <link href="https://nestetrisjp.github.io/das-introduction/"/>
+    <id>https://nestetrisjp.github.io/das-introduction/</id>
+    <published>2018-08-22T00:00:00.000Z</published>
+    <updated>2022-01-01T06:07:23.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ここでは、テトリスにおけるDASについて概説します。&lt;/p&gt;
+&lt;h2 id=&quot;DASとは？&quot;&gt;DASとは？&lt;/h2&gt;
+&lt;p&gt;DAS (Delayed Auto Shift)</summary>
+        
+      
+    
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/categories/DAS/"/>
+    
+    
+    <category term="DAS" scheme="https://nestetrisjp.github.io/tags/DAS/"/>
+    
+  </entry>
+  
+</feed>
