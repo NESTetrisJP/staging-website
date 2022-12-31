@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/wall-charge-left-right-left-too-late.png">
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/wall-charge-left-right-left-too-early.png">
 <meta property="article:published_time" content="2018-08-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-31T03:49:59.935Z">
+<meta property="article:modified_time" content="2022-12-31T14:20:17.796Z">
 <meta property="article:author" content="NES Tetris Japan Team">
 <meta property="article:tag" content="DAS">
 <meta property="article:tag" content="壁チャージ">
@@ -59,11 +59,7 @@
 <link rel="stylesheet" href="/staging-website/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/staging-website/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="/staging-website/apng_controller/additional_styles.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -137,26 +133,26 @@
 <p>壁チャージは、これらの仕様を利用するものです。</p>
 <p>ここで言う壁とは、フィールドの端に限らず、ミノの移動に障害となるブロックも指します。つまり、横に入力をしていてもミノが移動できない場合は常に、DASカウンターが最大値 (16) となっていることが保証されるのです！</p>
 <p>横を押し続けて壁にぶつかった時の、DASの挙動です。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-hold.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-hold.png" />
 <p>横を1回ずつ押して壁にぶつかった時の、DASの挙動です。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-tap.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-tap.png" />
 <p>実際のゲームでは、ミノを端まで持っていった後にも横を離さないことでチャージしたり、</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-hold-real.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-hold-real.png" />
 <p>次のミノを遠くまで持っていきたい時やDASが切れてしまった時に「壁に引っ掛け」たりします。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-tap-real.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-tap-real.png" />
 <p>後者の引っ掛けは、段差さえあればどこでも使うことができますので、慣れればほぼいつでもDASチャージを行うことができます。</p>
 <p>引っ掛けて次に切り返すという芸当も可能です。最初のミノを左に移動して、地面で右に壁チャージ。AREの間に左に振り替えて、フルチャージで棒を移動できます。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-left-right-left-success.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-left-right-left-success.png" />
 <p>壁チャージの効能はこれだけではありません。<a href="/das-introduction/">DASの基本</a>において、チャージ状態にも10～16の値があると述べました。この違いは、以下のような「届く/届かない」の違いをもたらします。</p>
 <p>DASが15あるいは16の場合は、棒が高さ6の壁を越えて左に移動できます。</p>
-<img class="apng-images" src="/staging-website/images/apng/i-piece-left-full-charge.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/i-piece-left-full-charge.png" />
 <p>一方、DASが10の場合、高さ5の壁すら越えることができません。</p>
-<img class="apng-images" src="/staging-website/images/apng/i-piece-left-partially-charge.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/i-piece-left-partially-charge.png" />
 <p>実際のゲームではDASの値を見ることは出来ませんから、届く/届かないは時の運ということになってしまうのでしょうか？それともDASの値を、自身の操作から精密に予測あるいは調整する必要があるのでしょうか？答えは否です。壁チャージが成功すれば、フルチャージになっていることが保証されていますから、必ず「届く」のです。</p>
 <p>壁ではなくブロックに引っ掛ける壁チャージには、ある程度精密な操作が必要となります。例えば、入力（今回は右です）が遅すぎると、チャージが起こる前に接地してしまい、次の棒がフルチャージで移動を開始しないために、左に持っていくことができなくなります。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-left-right-left-too-late.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-left-right-left-too-late.png" />
 <p>逆に入力が早すぎると、引っ掛ける予定の壁の上にミノが移動してしまい、そこで接地してしまいます。新しく右入力をしてしまったため、DASがリセットされ、次のミノは全くと言っていいほど動かすことができません。</p>
-<img class="apng-images" src="/staging-website/images/apng/wall-charge-left-right-left-too-early.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/wall-charge-left-right-left-too-early.png" />
 <p>壁チャージが成功する時間範囲は、落下速度と引っ掛ける壁の高さによって変わります。上の場合は2フレームに1マス落下する1/2Gの速度で、壁の高さが1マスなので、壁チャージが成功するのはたった2フレーム (1/30秒) となります。高速域ではもっと高い壁に引っ掛けた方がより安全ということは意識しておくべきでしょう。</p>
 <h2 id="横の長押し-extended-tap">横の長押し (extended tap)</h2>
 <p>執筆中</p>
@@ -164,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech-2/" data-id="clcbep2nn0001q4p1d1pochee" data-title="DASのテクニック (2): DASをチャージする | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech-2/" data-id="clcc17ktr0002p4oneqqs7nw9" data-title="DASのテクニック (2): DASをチャージする | NES Tetris Japan Portal" class="article-share-link">共有</a>
       
       
       
@@ -283,10 +279,6 @@
 
 
 
-  
-<script src="/staging-website/fancybox/jquery.fancybox.min.js"></script>
-
-
 
 
 <script src="/staging-website/js/script.js"></script>
@@ -296,5 +288,5 @@
 
 
   </div>
-</body>
+<!-- hexo injector body_end start --><script type="module">import { ApngController } from "/staging-website/apng_controller/apng_controller.min.mjs";ApngController.initialize().transformAll()</script><!-- hexo injector body_end end --></body>
 </html>

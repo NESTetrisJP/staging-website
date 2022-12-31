@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/das-comparison-gb.png">
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/das-example.png">
 <meta property="article:published_time" content="2018-08-22T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-31T03:49:59.935Z">
+<meta property="article:modified_time" content="2022-12-31T14:20:17.796Z">
 <meta property="article:author" content="NES Tetris Japan Team">
 <meta property="article:tag" content="DAS">
 <meta name="twitter:card" content="summary">
@@ -55,11 +55,7 @@
 <link rel="stylesheet" href="/staging-website/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/staging-website/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="/staging-website/apng_controller/additional_styles.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -128,7 +124,7 @@
 <h2 id="DASとは？">DASとは？</h2>
 <p>DAS (Delayed Auto Shift) にはいくつかの意味が存在し、文脈によって使い分けられます。いずれの意味でも、日本語では「横タメ」と呼称することがあります。</p>
 <p>多くのテトリスでは、横方向に入力をし続けた時、キーボードのキーを押し続けた時の文字入力と同じような挙動を示します。つまり、まず入力が始まった瞬間に横に1マス移動し、その後一定の間を置いてから、入力が途切れるまで短い間隔で移動し続ける、という振る舞いです。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-keyboard.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-keyboard.png" />
 <p>まず、この横移動のシステム全体を広くDASと呼ぶことがあります。</p>
 <p>このシステムは、テトリスの操作性の向上に大きく役立っています。もしこれが搭載されていなかったら、端までミノを動かすために連打をすることが必要になってしまいます。</p>
 <p>また、「間を置いてから」「短い間隔で移動し続ける」という要素は非常に重要なものです。押し続けても横移動の間隔が長い場合、レベルが上がり高速に落下する中でミノを端まで持っていくことが難しくなります。一方、1回目の移動から2回目の移動までの「間」が存在せず、最初から短い間隔で移動し続けるとするとどうでしょうか。横に1マス移動したい場合、横を押してからすぐに離すという操作を行わなければなりませんが、離すまでの時間が少しでも長くなってしまうと、その間に2回目の移動が行われてしまい、意図した位置に移動できない、ということになります（これをミノが「滑る」と表現することがあります）。</p>
@@ -149,34 +145,35 @@
 <td style="text-align:center">テトリスオンライン (横移動4)</td>
 <td style="text-align:center">110 ms (≒7 f)</td>
 <td style="text-align:center">55 ms (≒3 f)</td>
-<td style="text-align:center"><img class="apng-images" src="/staging-website/images/apng/das-comparison-toj.png" /></td>
+<td style="text-align:center"><img class="apng-controller-image" src="/staging-website/images/apng/das-comparison-toj.png" data-apng-controller-group="das-comparison"/></td>
 </tr>
 <tr>
 <td style="text-align:center">ぷよぷよテトリス</td>
 <td style="text-align:center">11 f</td>
 <td style="text-align:center">2 f</td>
-<td style="text-align:center"><img class="apng-images" src="/staging-website/images/apng/das-comparison-ppt.png" /></td>
+<td style="text-align:center"><img class="apng-controller-image" src="/staging-website/images/apng/das-comparison-ppt.png" data-apng-controller-group="das-comparison"/></td>
 </tr>
 <tr>
 <td style="text-align:center">TGM (初代)</td>
 <td style="text-align:center">14 f</td>
 <td style="text-align:center">1 f</td>
-<td style="text-align:center"><img class="apng-images" src="/staging-website/images/apng/das-comparison-tgm.png" /></td>
+<td style="text-align:center"><img class="apng-controller-image" src="/staging-website/images/apng/das-comparison-tgm.png" data-apng-controller-group="das-comparison"/></td>
 </tr>
 <tr>
 <td style="text-align:center">NESテトリス</td>
 <td style="text-align:center">16 f</td>
 <td style="text-align:center">6 f</td>
-<td style="text-align:center"><img class="apng-images" src="/staging-website/images/apng/das-comparison-nes.png" /></td>
+<td style="text-align:center"><img class="apng-controller-image" src="/staging-website/images/apng/das-comparison-nes.png" data-apng-controller-group="das-comparison"/></td>
 </tr>
 <tr>
 <td style="text-align:center">GBテトリス</td>
 <td style="text-align:center">24 f</td>
 <td style="text-align:center">9 f</td>
-<td style="text-align:center"><img class="apng-images" src="/staging-website/images/apng/das-comparison-gb.png" /></td>
+<td style="text-align:center"><img class="apng-controller-image" src="/staging-website/images/apng/das-comparison-gb.png" data-apng-controller-group="das-comparison"/></td>
 </tr>
 </tbody>
 </table>
+<div class="apng-controller-group-controller" data-apng-controller-group="das-comparison"></div>
 <h2 id="NESテトリスにおけるDAS">NESテトリスにおけるDAS</h2>
 <p>上の表にある通り、NESテトリスにおけるDASは16フレーム、ARRは6フレームです。ゲームボーイ版ほどでは無いですが、他のゲームに比べてかなり遅く、高速域でミノを端まで持っていくためには不十分です。</p>
 <p>しかしNESテトリスには、この困難をある程度克服できる仕様が存在します。それは、</p>
@@ -192,7 +189,7 @@
 <p>NESテトリスのDASカウンターは、0から16までの値を取ります。新たに横が入力された時には、これが0にリセットされ、ミノが1マス移動します。その後、横が入力されているフレーム毎にカウンターが1加算されます。カウンターが15または16の状態で、更に横が入力され続けていると、カウンターが10にセットされ、ミノが1マス移動します。なお、カウンターの最大値が15ではなく16となっているのは、上に挙げた仕様の4つ目と5つ目に該当する場合にカウンターの値が16となるためです。</p>
 <p>DASカウンターが0～15に増加するまでの間がDASの16フレームとなり、10～15を繰り返す間がARRの6フレームとなっているわけです。</p>
 <p><strong>今後の記事では、DASカウンターが0～9の値を取る間の状態を「未チャージ状態」、10～16の値を取る間の状態を「チャージ状態」、15または16の状態を「フルチャージ状態」と呼ぶことにします。画像においてはそれぞれ、赤、黄色、緑の色で示すことがあります。</strong></p>
-<img class="apng-images" src="/staging-website/images/apng/das-example.png" /><hr class="footnotes-sep">
+<img class="apng-controller-image" src="/staging-website/images/apng/das-example.png" /><hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn-das-introduction-1" class="footnote-item"><p>前者を「DAS Delay」、後者を「DAS」と呼ぶ流派もあります。「60Hz DAS」と書いてあればこちらです。ややこしいですね。 <a href="#fnref-das-introduction-1" class="footnote-backref">↩︎</a></p>
@@ -203,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-introduction/" data-id="clcbep2nh0000q4p1bede4ft6" data-title="DASの基本 | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-introduction/" data-id="clcc17kto0001p4on6ev5chco" data-title="DASの基本 | NES Tetris Japan Portal" class="article-share-link">共有</a>
       
       
       
@@ -326,10 +323,6 @@
 
 
 
-  
-<script src="/staging-website/fancybox/jquery.fancybox.min.js"></script>
-
-
 
 
 <script src="/staging-website/js/script.js"></script>
@@ -339,5 +332,5 @@
 
 
   </div>
-</body>
+<!-- hexo injector body_end start --><script type="module">import { ApngController } from "/staging-website/apng_controller/apng_controller.min.mjs";ApngController.initialize().transformAll()</script><!-- hexo injector body_end end --></body>
 </html>

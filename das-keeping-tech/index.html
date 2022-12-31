@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/das-reset-by-turn-tapping.png">
 <meta property="og:image" content="https://nestetrisjp.github.io/staging-website/images/apng/das-stopping.png">
 <meta property="article:published_time" content="2018-08-23T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-31T03:49:59.935Z">
+<meta property="article:modified_time" content="2022-12-31T14:20:17.796Z">
 <meta property="article:author" content="NES Tetris Japan Team">
 <meta property="article:tag" content="DAS">
 <meta property="article:tag" content="横タメの振り替え">
@@ -56,11 +56,7 @@
 <link rel="stylesheet" href="/staging-website/css/style.css">
 
   
-    
-<link rel="stylesheet" href="/staging-website/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="/staging-website/apng_controller/additional_styles.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -128,9 +124,9 @@
         <h2 id="「DASを使い回す」とは？">「DASを使い回す」とは？</h2>
 <p><a href="/das-introduction/">DASの基本</a>でも少し触れましたが、DASが16フレーム、ARRが6フレームであるNESテトリスの横移動の仕様では、高速域でミノを端まで持っていくには不十分です。「DASを使い回す」ことにより、この問題をある程度解決することができます。「DASを使い回す」とは、DASカウンターがチャージ状態にある状態を維持しながら次のミノの操作を始めることを指し、これによって16フレームの待ち時間を取り除くことができます。</p>
 <p>DASを使い回すことの重要性を理解するため、次の図をご覧ください。Lv19～28の間は、2フレームにつき1マス落下する「1/2G」の落下速度となっており、横移動の速度よりもずっと速くなっています。まず、これがDASを使い回さない「未チャージ」の状態での移動です。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-charge-comparison-no-charge.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-charge-comparison-no-charge.png" />
 <p>次に、これがDASを使い回した「フルチャージ」状態からの移動です。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-charge-comparison-full-charge.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-charge-comparison-full-charge.png" />
 <p>未チャージでは棒を左端に持っていくことが不可能ですが、チャージ状態を維持したまま移動を始めることでそれが可能になります。落下が高速であればあるほど、DASを使い回す場合と使い回さない場合の可動域は大きく異なってきます。</p>
 <h2 id="どうやってDASを使い回すのか">どうやってDASを使い回すのか</h2>
 <p>さて、それではどのようにしてDASを使い回すのでしょうか。<a href="/das-introduction/">DASの基本</a>の最後で、以下の性質を紹介しました。</p>
@@ -146,16 +142,16 @@
 <p>この2つから、「<strong>横タメの振り替え</strong>」と「<strong>ビタ止め</strong>」という技術が導かれます。</p>
 <h2 id="横タメの振り替え">横タメの振り替え</h2>
 <p>「横タメの振り替え」とは、このAREの間に新たに横入力を行うことで、DASをリセットせずに、新たな方向で横移動を行うことができるテクニックです。AREの間は、DASカウンターが更新されないため、いくら左右を新しく入力してもリセットされないというわけです。ミノが出現した後は、現在入力されている方向にミノが移動してくれます。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-switching.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-switching.png" />
 <p>上の例では、最初のTミノでDASがチャージされたまま接地し、AREの間に左入力を始めることで、DASをリセットせずに次のミノをスムーズに移動させることに成功しています。</p>
 <p>これの難しさは、AREの間に、次のミノをどちらの方向に動かすかを決めなければならないということです。NEXTをよく見て、次のミノをどこに置くかを予め考えておく習慣をつけましょう。</p>
 <h2 id="ビタ止め">ビタ止め</h2>
 <p>「ビタ止め」とは、ミノを指定の位置へ移動するために、1回の横タメ操作のみを用いることで、DASをリセットさせないテクニックです。</p>
 <p>例えば、Oミノを左端から1マス離して置くことを考えます。まず考えられる操作方法は、左を3回連打することです。対戦テトリスや、TGMシリーズでの最適化操作に慣れている方でしたら、横タメで左端に持っていって、右に1回入力することでこの操作を行うことでしょう。</p>
 <p>前者では横に入力するごとに、後者では右に折り返し入力をした時に、DASカウンターが0にリセットされます。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-reset-by-repeated-tapping.png" /> <img class="apng-images" src="/staging-website/images/apng/das-reset-by-turn-tapping.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-reset-by-repeated-tapping.png" /> <img class="apng-controller-image" src="/staging-website/images/apng/das-reset-by-turn-tapping.png" />
 <p>一方、「ビタ止め」操作では、横タメで左に持っていって、置きたい場所まで移動できた時点で横入力を離します。離しただけではDASがリセットされないという仕様により、DASカウンターを維持することが可能となっているのです。</p>
-<img class="apng-images" src="/staging-website/images/apng/das-stopping.png" />
+<img class="apng-controller-image" src="/staging-website/images/apng/das-stopping.png" />
 <p>チャージ状態にある間は、1マス移動してからもう1マス移動するまでに6フレームかかりました。この6フレーム、つまり1/10秒の間に入力を離さなければならないということになります。慣れれば大した短さではないですが、習得するまでは離すタイミングを掴むのに苦労するでしょう。</p>
 <p>また、移動が足りなかった、あるいは、移動しすぎたのを修正しようとしてもう一度入力をすると、そこでDASがリセットされてしまいます。ビタ止めが失敗した場合は、後述の「壁チャージ」というテクニックを使えなければどうしようもないということは注意しなければならないでしょう。</p>
 <p>「ビタ止め」と「振り替え」によりDASをリセットさせないことで、チャージ状態を維持したまま次々とミノの操作が行えることが分かります。この2つが、DASの基本テクニックとなります。</p>
@@ -170,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech/" data-id="clcbep2ns0003q4p1947c1k0m" data-title="DASのテクニック (1): DASを使い回す | NES Tetris Japan Portal" class="article-share-link">共有</a>
+      <a data-url="https://nestetrisjp.github.io/staging-website/das-keeping-tech/" data-id="clcc17ktv0004p4on5gf9ass5" data-title="DASのテクニック (1): DASを使い回す | NES Tetris Japan Portal" class="article-share-link">共有</a>
       
       
       
@@ -298,10 +294,6 @@
 
 
 
-  
-<script src="/staging-website/fancybox/jquery.fancybox.min.js"></script>
-
-
 
 
 <script src="/staging-website/js/script.js"></script>
@@ -311,5 +303,5 @@
 
 
   </div>
-</body>
+<!-- hexo injector body_end start --><script type="module">import { ApngController } from "/staging-website/apng_controller/apng_controller.min.mjs";ApngController.initialize().transformAll()</script><!-- hexo injector body_end end --></body>
 </html>
