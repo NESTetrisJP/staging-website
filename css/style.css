@@ -613,6 +613,9 @@ a.article-title:hover {
   display: block;
   margin: auto;
 }
+.article-entry img + img {
+  margin-top: 8px;
+}
 .article-entry iframe {
   border: none;
 }
