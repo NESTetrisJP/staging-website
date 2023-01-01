@@ -362,6 +362,11 @@ body {
   left: calc(50% - 20px);
   z-index: 2;
 }
+@media screen and (max-width: 479px) {
+  #header-title.off {
+    display: none;
+  }
+}
 #logo,
 #subtitle {
   text-decoration: none;
